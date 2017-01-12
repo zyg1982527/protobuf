@@ -133,6 +133,8 @@ message TestAllTypes {
   repeated protobuf_unittest_import.PublicImportMessage
       repeated_public_import_message = 54;
 
+  repeated TestAllTypes children = 55;
+
   // For oneof test
   oneof oneof_field {
     uint32 oneof_uint32 = 111;
