@@ -644,6 +644,7 @@ uint32_t GPBFieldAlternateTag(GPBFieldDescriptor *self) {
   NSAssert(description_->dataType == GPBDataTypeEnum,
            @"Field Must be of type GPBDataTypeEnum");
   if (description_->flags & GPBFieldHasEnumDescriptor) {
+    return YES;
     return enumHandling_.enumDescriptor_.enumVerifier(value);
   } else {
     return enumHandling_.enumVerifier_(value);
